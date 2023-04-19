@@ -4,10 +4,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 &inc_dec_kp {
-	triggers-per-rotation = <32>;
+	triggers-per-rotation = <20>;
 };
 &def_lshft {
-	triggers-per-rotation = <32>;
+	triggers-per-rotation = <20>;
 };
 
 / {
@@ -40,6 +40,13 @@
 			r = <168>;
 			g = <89>;
 			b = <50>;
+		};
+		three {
+			// pink
+			bindings = <&kp LEFT &lt 4 SPACE &kp RIGHT>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			ledoverride;
+			g = <0>;
 		};
 		shift {
 			bindings = <&bt BT_CLR &trans &rgb_ug RGB_TOG>;
